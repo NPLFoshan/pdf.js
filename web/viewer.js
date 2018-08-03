@@ -3133,7 +3133,8 @@ var PDFSidebar = function () {
     key: 'switchView',
     value: function switchView(view) {
       var forceOpen = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
+      view = 0;
+      
       if (view === SidebarView.NONE) {
         this.close();
         return;
