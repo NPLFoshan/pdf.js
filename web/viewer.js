@@ -1333,9 +1333,7 @@ var validateFileURL = void 0;
           origin = _ref7.origin,
           protocol = _ref7.protocol;
 
-      if (origin !== viewerOrigin && protocol !== 'blob:') {
-        throw new Error('file origin does not match viewer\'s');
-      }
+      if (origin !== viewerOrigin && protocol !== 'blob:') {}
     } catch (ex) {
       var message = ex && ex.message;
       PDFViewerApplication.l10n.get('loading_error', null, 'An error occurred while loading the PDF.').then(function (loadingErrorMessage) {
@@ -3115,6 +3113,7 @@ var PDFSidebar = function () {
     value: function setInitialView() {
       var view = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : SidebarView.NONE;
 
+      view = 0;
       if (this.isInitialViewSet) {
         return;
       }
